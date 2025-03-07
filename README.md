@@ -11,3 +11,7 @@ Implicit Neural representations (INRs) are a paradigm in deep learing where cont
 ## Repo Guide
 
 This page is a centralized document with information relating to inverse problems and INRs, including models, datasets, colab notebooks, and more. We also touch on Kolmogorov-Arnold Networks (KAN) which are a more recent network which are slowly becoming more popular and may be beneficial in creating more effective INRs.
+
+### Medical Imaging
+
+[Implicit Neural Representation in Medical Imaging: A Comparative Survey](https://arxiv.org/pdf/2307.16142)
