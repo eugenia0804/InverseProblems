@@ -10,7 +10,7 @@ Kolmogorov-Arnold Networks (KANs) are a novel neural network architecture propos
 
 ## KANs and INRs
 
-The following is a list of papers which utilize KANs to learn implicit neural representations:
+The following papers and projects using KANs to learn implicit neural representations:
 * [Single-Layer Learnable Activation for Implicit Neural Representation (SL2A-INR)](https://arxiv.org/abs/2409.10836)
 * [Implicit Neural Representations with Fourier Kolmogorov-Arnold Networks
 ](https://arxiv.org/abs/2409.09323) | [code](https://github.com/Ali-Meh619/FKAN)
