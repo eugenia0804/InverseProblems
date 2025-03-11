@@ -10,8 +10,8 @@ def get_mgrid(shape):
     shape: tuple/list with desired dimensions of the grid 
     '''
     dim = len(shape)
-    if dim < 2:
-        return Exception("Dimension must be at least 2")
+    # if dim < 2:
+    #     return Exception("Dimension must be at least 2")
     
     tensors = tuple([torch.linspace(-1, 1, steps=s) for s in shape])
     mgrid = torch.stack(torch.meshgrid(*tensors), dim=-1)
@@ -49,7 +49,8 @@ class ImageFitting(Dataset):
         return 1
 
     def __getitem__(self, idx):
-        if idx > 0: raise IndexError
+        if idx > 0:
+            raise IndexError
 
         return self.coords, self.pixels
     
