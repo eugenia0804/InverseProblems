@@ -20,6 +20,7 @@ The findings in these papers suggest that incorporating KAN layers into implicit
 
 ## Other helpful Resources
 ### Articles
+* [A Beginner-friendly Introduction to Kolmogorov Arnold Networks](https://www.dailydoseofds.com/a-beginner-friendly-introduction-to-kolmogorov-arnold-networks-kan/)
 * [The Math Behind KAN](https://towardsdatascience.com/the-math-behind-kan-kolmogorov-arnold-networks-7c12a164ba95/)
 
 ### Youtube

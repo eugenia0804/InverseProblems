@@ -8,15 +8,42 @@ A repo dedicated to learning all about inverse problems and solutions using impl
 
 Implicit Neural representations (INRs) are a paradigm in deep learing where continuous signals such as images, 3D shapes, or sound waves, or physical fields are represented as continuous functions through neural networks. Unlike traditional discrete representations (like pixel grids or voxels), INRs encode the entire signal within the weights of a neural network that maps coordinates to values. For example, mapping (x,y) coordinates to RGB values for an image, or (x,y,z) coordinates to volume for a 3D shape. This approach creates a continuous, fully differentiable representation that can be queried at any resolution. INRs have gained significant traction as an elegant way to solve inverse problems, where we aim to reconstruct unknown signals from limited, noisy, or indirect observations.
 
+## INR Use Cases
+
+__3D Scene Representation:__ INRs excel at representing complex 3D scenes through models like NeRF (Neural Radiance Fields), enabling photorealistic novel view synthesis from a sparse set of input images.
+
+__Medical Imaging:__ INRs can compactly represent CT and MRI scans, supporting super-resolution, noise reduction, and reconstruction from limited data—particularly valuable when dealing with sparse or incomplete medical data.
+
+__Signal Compression:__ By encoding images, audio, or video as compact neural networks rather than discrete samples, INRs achieve impressive compression ratios while preserving high-frequency details that traditional methods might lose.
+
+__Physics Simulation:__ INRs can represent solutions to partial differential equations, enabling efficient simulation of physical phenomena like fluid dynamics or heat transfer with continuous outputs at arbitrary resolution.
+
+__Shape Representation:__ Using signed distance functions (SDFs), INRs can represent complex 3D geometries with smooth surfaces and sharp features, useful for computer graphics, CAD, and digital fabrication.
+
 ## Repo Guide
 
+* #### [Datasets](datasets/README.md)
+    * fastMRI
+    * NeRF
+    * GALAXY?
+    * kodak
+
+* #### [Models](models/README.md)
+    * Diffusion
+    * [SIREN](models/SIREN/README.md)
+        * [siren pytorch](models/SIREN/siren.py)
+        * [training a SIREN](models/SIREN/explore_siren.ipynb)
+    * [ConvINR](models/ConvINR/README.md)
+        * [training a ConvINR](models/ConvINR/train_cnn_inr.ipynb)
+
+* #### [Metrics](metrics/README.md)
+    * Peak-Signal-to-Noise Ratio (PSNR)
+    * Structural Similarity Index Measure (SSIM)
+    * Uncertainty Quantification
+    * Negative Log-Likelihood (NLL)
+    * Expected Calibration Error (ECE)
 
 
-#### Datasets
-
-#### Models
-* Diffusion
-* SIREN
 
 ### Medical Imaging
 
