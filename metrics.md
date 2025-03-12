@@ -2,7 +2,7 @@
 
 The page provides a summary and code snippet of all relevant metrics in the reverse imaging problem space. The Jupyter notebook version of this section can be found in `notebooks/metrics.ipynb`.
 
-## Peak-Signal-to-Noise Ratio (PSNR)
+## Peak-Signal-to-Noise Ratio (PSNR) $\uparrow$
 
 Given a reference image $f$ and a test image $g$, both of size $M \times N$, the PSNR between $f$ and $g$ is defined by:
 
@@ -27,7 +27,7 @@ def psnr(x, gt, data_range=None):
     return peak_signal_noise_ratio(x, gt, data_range=data_range)
 ```
 
-## Structural Similarity Index Measure (SSIM)
+## Structural Similarity Index Measure (SSIM) $\uparrow$
 
 The SSIM is a well-known quality metric used to measure the similarity between two images and is considered to be correlated with the quality perception of the human visual system (HVS). Instead of using traditional error summation methods, the SSIM is designed by modeling any image distortion as a combination of three factors: loss of correlation, luminance distortion, and contrast distortion. The SSIM is defined as:
 
@@ -62,9 +62,13 @@ When developing method with capability of uncertainty quantification, we want to
 
 Compare to PSNR and SSIM, which are metrics dedicating to the imaging field and have readily available function in `skimage` package, metrics related to uncertainty quantification quality are more broadly applicable.
 
-### Negative Log-Likelihood (NLL)
+### Negative Log-Likelihood (NLL) $\downarrow$
 
+The NLL metric estimates how well the predicted probability distribution matches the real distribution. It is normally used in classification tasks but can also be used as an uncertainty quantification metric. It is defined as:
 
+$$H(p,\hat{p}) = -E_p[log\hat{p}] = -\sum^n_{i=1}p_ilog(\hat{p_i})= -log(\hat{p_j})$$
+
+where $p_j=1$ is the ground truth and $\hat{p_j} = softmax_j(x)$. 
 
 
 #### Implemenation:
@@ -73,7 +77,7 @@ def nll(x, mean, std):
     nll = (x-mean) ** 2 / (2 * std ** 2) + 0.5 * np.log(2 * np.pi * std ** 2)
     return nll.mean().astype(float)
 ```
-
+<!-- 
 ### Out of Distribution Rate (OODR)
 
 #### Implemenation:
@@ -81,17 +85,22 @@ def nll(x, mean, std):
 def oodr(x, mean, std, threshold=4.0):
     ratio = np.abs(mean-x)/std
     return (ratio > threshold).mean()
-```
+``` -->
 
-### Expected Calibration Error (ECE)
+### Expected Calibration Error (ECE) $\downarrow$
 
-ECE approximates by partitioning predictions into M equally-spaced bins (similar to the reliability diagrams) and taking a weighted average of the bins’ accuracy/confidence
-difference. More precisely,
+ECE is defined as
 
-$$ECE = \sum_{m=1}^{M} \frac{|B_m|}{n} \left| \text{acc}(B_m) - \text{conf}(B_m) \right|$$
+$$ECE=E_{\hat{P}}[|P(\hat{Y}=y|\hat{P}=p)-p|]=\sum_p P(\hat{P}=p)|P(\hat{Y}=y|\hat{P}=p)-p|$$
 
-where $n$ is the number of samples. The difference between
-$acc$ and $conf$ for a given bin represents the calibration gap.
+
+We approximate the probability distribution by a histogram with $B$ bins. Then $P(\hat{P}=p)=\frac{n_b}{N}$ where $n_b$ is the number of probabilities in bin $b$ and $N$ is the size of the dataset. Since we put $n_b$ probabilities into one bin, $p$ is not a single value. Therefore, a representative value $p=\sum_{\hat{p_i}\in b}\frac{\hat{p_i}}{n_b}=conf(b)$ is necessary. Similarly, we can set $P(\hat{Y}=y|\hat{P}=p)=\sum_{\hat{p_i}\in b}\frac{1(y_i=\hat{y_i})}{n_b}=acc(b)$ where $\hat{y_i}$ is obtained from the highest probability (arg max). $\hat{p_i}$ is also the highest probability (max).
+
+ECE is then defined as follows:
+
+$$ECE(B)=\sum^B_{b=1}\frac{n_b}{N}|acc(b)-conf(b)|=\frac{1}{N}\sum_{b\in B}|\sum_{(\hat{p_i}, \hat{y_i})\in b}1(y_i=\hat{y_i})-\hat{p_i}|$$
+
+The accuracy $acc(b)$ is also called “observed relative frequency”, while the confidence $conf(b)$ is a synonym fo “average predicted frequency”.
 
 #### Implemenation:
 ```python
@@ -130,33 +139,16 @@ def ece(samples, gt, percent_diff=0.05):
     return ece.item()
 ```
 
-A more detailed 
+A more detailed explanation on the calibration process can be found in: https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/
 
-Citation:
 
-@misc{Pavlovic_2025, title={Expected calibration error (ECE): A step-by-step visual explanation}, url={https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/}, journal={Towards Data Science}, author={Pavlovic, Maja}, year={2025}, month={Jan}} 
 
-@inproceedings{hore2010image,
-  title={Image quality metrics: PSNR vs. SSIM},
-  author={Hore, Alain and Ziou, Djemel},
-  booktitle={2010 20th international conference on pattern recognition},
-  pages={2366--2369},
-  year={2010},
-  organization={IEEE}
-}
+## References:
 
-@misc{towardsdatascienceExpectedCalibration,
-	author = {Maja Pavlovic},
-	title = {{E}xpected {C}alibration {E}rror ({E}{C}{E}): {A} {S}tep-by-{S}tep {V}isual {E}xplanation | {T}owards {D}ata {S}cience --- towardsdatascience.com},
-	howpublished = {\url{https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/}},
-	year = {},
-	note = {[Accessed 06-03-2025]},
-}
+Guo, C., Pleiss, G., Sun, Y., & Weinberger, K. Q. (2017, July). On calibration of modern neural networks. In International conference on machine learning (pp. 1321-1330). PMLR.
 
-@misc{arxiv,
-	author = {},
-	title = {arxiv.org},
-	howpublished = {\url{https://arxiv.org/pdf/1706.04599}},
-	year = {},
-	note = {[Accessed 06-03-2025]},
-}
+Hore, A., & Ziou, D. (2010). Image quality metrics: PSNR vs. SSIM. In 2010 20th International Conference on Pattern Recognition (pp. 2366–2369). IEEE. https://doi.org/10.1109/ICPR.2010.579 (If available, replace with actual DOI or link to proceedings.)
+
+Nieradzik, L. (n.d.). Metrics for uncertainty estimation. Retrieved March 6, 2025, from https://lars76.github.io/2020/08/07/metrics-for-uncertainty-estimation.html
+
+Pavlovic, M. (2025, January). Expected calibration error (ECE): A step-by-step visual explanation. Towards Data Science. https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/
