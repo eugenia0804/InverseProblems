@@ -43,8 +43,6 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * Negative Log-Likelihood (NLL)
     * Expected Calibration Error (ECE)
 
-
-
-### Medical Imaging
-
-[Implicit Neural Representation in Medical Imaging: A Comparative Survey](https://arxiv.org/pdf/2307.16142)
+* #### Slide decks
+    * [KANs and INRs](slides/KANs%20and%20INRs.pdf)
+    * [Unsupervised DL Methods in Inverse Imaging Problems](slides/Unsupervised%20DL%20Methods%20in%20Inverse%20Imaging%20Problems.pdf)
