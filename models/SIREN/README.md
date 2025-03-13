@@ -20,3 +20,5 @@ SIRENs excel particularly in applications like image and audio reconstruction, 3
 * [Understanding Fourier Features](https://sair.synerise.com/fourier-feature-encoding/)
 
 * [An Interactive Guide to the Fourier Transform](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
+
+* [Implicit Neural Representations with Periodic Activation Functions](https://www.youtube.com/watch?v=Q2fLWGBeaiI&t=2s) - Youtube Video from the authors

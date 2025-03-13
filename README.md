@@ -28,7 +28,7 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * GALAXY?
     * kodak
 
-* #### [Models](models/README.md)
+* #### Models
     * Diffusion
     * [SIREN](models/SIREN/README.md)
         * [siren pytorch](models/SIREN/siren.py)
