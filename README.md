@@ -33,6 +33,7 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * [SIREN](models/SIREN/README.md)
         * [siren pytorch](models/SIREN/siren.py)
         * [training a SIREN](models/SIREN/explore_siren.ipynb)
+    * [WIRE](models/WIRE/README.md)
     * [ConvINR](models/ConvINR/README.md)
         * [training a ConvINR](models/ConvINR/train_cnn_inr.ipynb)
 

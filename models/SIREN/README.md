@@ -1,5 +1,7 @@
 # Sinusoidal Representation Network (SIREN)
 
+### [Paper](https://arxiv.org/abs/2006.09661) | [Project Page](https://www.vincentsitzmann.com/siren/) | [Github](https://github.com/vsitzmann/siren)
+
 SIRENs have shown to be one of the most effective neural network models for implicit neural representations and have began to become widely adopted. This is due to their remarkable ability to represent complex signals with high fidelity across a variety of domains. The sinusoidal activation functions at the core of SIRENs enable them to capture fine details and high-frequency information that traditional networks with ReLU or tanh activations struggle to model.
 The key advantages that have driven SIREN adoption include:
 
@@ -11,13 +13,10 @@ The key advantages that have driven SIREN adoption include:
 
 SIRENs excel particularly in applications like image and audio reconstruction, 3D shape representation, physics-informed neural networks, and other scenarios where capturing high-frequency details or honoring differential equations is crucial.
 
-### Link to the github of the original SIREN paper:
-[SIREN Github](https://github.com/vsitzmann/siren)
+### Other Resources
 
-### Other Resources helpful for understanding SIREN and related topics
+* [Notebook training a SIREN from the original authors](models/SIREN/explore_siren.ipynb)
 
-* [A helpful walkthrough for setting up and running a SIREN model from the original authors of the SIREN paper](models/SIREN/explore_siren.ipynb)
-
-* [A website explaining fourier features](https://sair.synerise.com/fourier-feature-encoding/)
+* [Understanding Fourier Features](https://sair.synerise.com/fourier-feature-encoding/)
 
 * [An Interactive Guide to the Fourier Transform](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
