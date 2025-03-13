@@ -29,4 +29,4 @@ The findings in these papers suggest that incorporating KAN layers into implicit
 
 * [B-Splines](https://www.youtube.com/live/qhQrRCJ-mVg?si=AQaK9X3wBtYCAVT3) - A lecture walking through the math of B-Splines and Bezier curves 
 
-I recommend checking out the [awesome-kan](https://github.com/mintisan/awesome-kan?tab=readme-ov-file#table-of-contents) github page which aims to be a comprehensive and organized collection that will help researchers and developers in the world of KAN. It contains additional tutorials as well as tons of projects making use of KANs to some extent
+I recommend checking out the __[awesome-kan](https://github.com/mintisan/awesome-kan?tab=readme-ov-file#table-of-contents) github page__ which aims to be a comprehensive and organized collection that will help researchers and developers in the world of KAN. It contains additional tutorials as well as tons of projects making use of KANs to some extent
