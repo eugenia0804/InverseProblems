@@ -1,16 +1,17 @@
 # Datasets
 
 ## FastMRI
-The the fastMRI dataset and information about it can be found [here](https://fastmri.med.nyu.edu/)
+The the fastMRI dataset and information about it can be found [here](https://fastmri.med.nyu.edu/).
+
 * To download the dataset, scroll to the bottom of the page and enter your electronic signature. An email will be sent to you with links to the downloads
 
-For more information on how to structure and use the fastmri data check out the [fastMRI github](https://github.com/facebookresearch/fastMRI)
+For more information on how to structure and use the fastmri data check out the [fastMRI github](https://github.com/facebookresearch/fastMRI).
 
-The mri files provided are in k wave space or k-space. To better understand k-space I recommend watching [this video](https://www.youtube.com/watch?v=GF7Z8Sd9qYE) by LOFT lab
+The mri files provided are in k wave space or k-space. To better understand k-space I recommend watching [this video](https://www.youtube.com/watch?v=GF7Z8Sd9qYE) by LOFT lab.
 
-## COSMOS
+## COSMOS Galaxy
 
-The COSMOS real galaxy dataset is extracted from the HST COSMOS survey for use with GalSim. It can be found [here](https://zenodo.org/records/3242143#.Ytjzki-KFAY)
+The COSMOS real galaxy dataset is extracted from the HST COSMOS survey for use with GalSim. It can be found [here](https://zenodo.org/records/3242143#.Ytjzki-KFAY).
 
 
 ## NeRF
@@ -22,7 +23,7 @@ The NERF dataset consists of multiple images of a scene captured from different 
 
 * [The NeRF project page](https://www.matthewtancik.com/nerf)
 
-For a pytorch implementation of the nerf model check out [yenchenlin's repo](https://github.com/yenchenlin/nerf-pytorch)
+For a pytorch implementation of the nerf model check out [yenchenlin's repo](https://github.com/yenchenlin/nerf-pytorch).
 
 
 ## Kodak images

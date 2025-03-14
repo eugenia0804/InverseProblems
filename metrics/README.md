@@ -1,6 +1,6 @@
 # Introduction
 
-The page provides a summary and code snippet of all relevant metrics in the reverse imaging problem space. The Jupyter notebook version of this section can be found in `notebooks/metrics.ipynb`.
+The page provides a summary and code snippet of all relevant metrics in the reverse imaging problem space. 
 
 ## Peak-Signal-to-Noise Ratio (PSNR) $\uparrow$
 
@@ -139,8 +139,8 @@ def ece(samples, gt, percent_diff=0.05):
     return ece.item()
 ```
 
-A more detailed explanation on the calibration process can be found in: https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/
-
+A more detailed explanation on the calibration process can be found [here](https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/
+).
 
 
 ## References:
