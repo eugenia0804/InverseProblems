@@ -46,11 +46,10 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * fastMRI
     * COSMOS Galaxy
     * NeRF
-    * GALAXY?
     * kodak
 
 * #### [Models](models/README.md)
-    * Diffusion
+    * [Diffusion](models/Diffusion/README.md)
     * [SIREN](models/SIREN/README.md)
         * [siren pytorch](models/SIREN/siren.py)
         * [training a SIREN](models/SIREN/explore_siren.ipynb)
