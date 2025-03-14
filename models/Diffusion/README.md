@@ -16,5 +16,9 @@ https://doubiiu.github.io/projects/DynamiCrafter/
 https://generativediffusionprior.github.io/
 
 
-
 ### Scientific Imaging
+
+#### Medical Imaging
+
+https://www.sciencedirect.com/science/article/abs/pii/S1361841523001068
+
