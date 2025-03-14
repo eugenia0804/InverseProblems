@@ -27,3 +27,8 @@ Here, the network $f_\theta$ is initialized randomly and input $z$ is filled wit
 In other words, <b>instead of searching for the answer in the image space we now search for it in the space of neural network's parameters</b>. We emphasize that we never use a pretrained network or an image database. Only corrupted image $x_0$ is used in the restoration process.  
 
 #### Project page: https://dmitryulyanov.github.io/deep_image_prior
+
+
+## References:
+
+Ulyanov, D., Vedaldi, A., & Lempitsky, V. (2018). Deep image prior. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 9446-9454).
