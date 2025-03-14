@@ -3,6 +3,26 @@ A repo dedicated to learning all about inverse problems and solutions using impl
 
 ## What is an inverse problem?
 
+An inverse problem involves reconstructing an unknown signal, image, or multidimensional volume from observed data. These observations are typically related to the unknown through a forward process, which is often non-invertible, making the problem ill-posed. This means that solutions may not exist, may not be unique, or may not depend continuously on the data.
+
+Examples of Inverse Problems:
+
+- Deblurring: Recovering a clear image from a blurred one.
+- Deconvolution: Extracting original signals from convoluted measurements.
+- Inpainting: Filling in missing or damaged parts of an image.
+- Compressed Sensing: Reconstructing high-dimensional signals from fewer measurements than traditionally required.
+- Superresolution: Enhancing the resolution of imaging systems beyond their original capabilities.
+
+Mathematical Definition:
+
+Mathematically, we can define a forward model as:
+
+$$\mathbf{y} = A(\mathbf{x}) + \mathbf{n}$$
+
+
+Here, $A: \mathbb{R}^n \rightarrow \mathbb{R}^m$ denotes the forward operator, which can be linear or nonlinear, and $\mathbf{n} \in \mathbb{R}^m$ represents random measurement noise. This formulation illustrates that the observed data are a noisy transformation of the true image, and the goal is to infer $\mathbf{x}$ from $\mathbf{y}$.
+
+
 
 ## Implicit Neural representations
 
