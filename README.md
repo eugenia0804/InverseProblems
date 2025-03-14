@@ -48,7 +48,7 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * NeRF
     * kodak
 
-* #### [Models](models/README.md)
+* #### Models
     * [Diffusion](models/Diffusion/README.md)
     * [SIREN](models/SIREN/README.md)
         * [siren pytorch](models/SIREN/siren.py)
@@ -62,6 +62,10 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * Structural Similarity Index Measure (SSIM)
     * Negative Log-Likelihood (NLL)
     * Expected Calibration Error (ECE)
+
+* #### [Kolmogorov-Arnold Network (KAN)](KAN/README.md)
+    * Tutorials
+    * KANs and INRs
 
 * #### Slide Decks
     * [KANs and INRs](slides/KANs%20and%20INRs.pdf)

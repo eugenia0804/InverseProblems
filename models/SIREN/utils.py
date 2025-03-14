@@ -1,3 +1,6 @@
+# Code Adapted from: Vincent Sitzmann and the team that created SIREN
+# Link: https://github.com/vsitzmann/siren
+
 import torch
 from torch.utils.data import Dataset
 import scipy.io.wavfile as wavfile
@@ -36,6 +39,7 @@ def gradient(y, x, grad_outputs=None):
         grad_outputs = torch.ones_like(y)
     grad = torch.autograd.grad(y, [x], grad_outputs=grad_outputs, create_graph=True)[0]
     return grad
+
 
 class ImageFitting(Dataset):
     def __init__(self, filename):
