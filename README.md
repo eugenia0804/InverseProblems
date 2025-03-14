@@ -44,12 +44,12 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
 
 * #### [Datasets](datasets/README.md)
     * fastMRI
+    * COSMOS Galaxy
     * NeRF
-    * GALAXY?
     * kodak
 
 * #### [Models](models/README.md)
-    * Diffusion
+    * [Diffusion](models/Diffusion/README.md)
     * [SIREN](models/SIREN/README.md)
         * [siren pytorch](models/SIREN/siren.py)
         * [training a SIREN](models/SIREN/explore_siren.ipynb)
@@ -60,11 +60,10 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
 * #### [Metrics](metrics/README.md)
     * Peak-Signal-to-Noise Ratio (PSNR)
     * Structural Similarity Index Measure (SSIM)
-    * Uncertainty Quantification
     * Negative Log-Likelihood (NLL)
     * Expected Calibration Error (ECE)
 
-* #### Slide decks
+* #### Slide Decks
     * [KANs and INRs](slides/KANs%20and%20INRs.pdf)
     * [Unsupervised DL Methods in Inverse Imaging Problems](slides/Unsupervised%20DL%20Methods%20in%20Inverse%20Imaging%20Problems.pdf)
 
