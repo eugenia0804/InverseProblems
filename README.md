@@ -46,10 +46,11 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
     * fastMRI
     * COSMOS Galaxy
     * NeRF
+    * GALAXY?
     * kodak
 
 * #### [Models](models/README.md)
-    * [Diffusion](models/Diffusion/README.md)
+    * Diffusion
     * [SIREN](models/SIREN/README.md)
         * [siren pytorch](models/SIREN/siren.py)
         * [training a SIREN](models/SIREN/explore_siren.ipynb)
@@ -66,7 +67,3 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
 * #### Slide Decks
     * [KANs and INRs](slides/KANs%20and%20INRs.pdf)
     * [Unsupervised DL Methods in Inverse Imaging Problems](slides/Unsupervised%20DL%20Methods%20in%20Inverse%20Imaging%20Problems.pdf)
-
-## Other Resources
-
-Be sure to check out the __[awesome-implicit-representations repo](https://github.com/vsitzmann/awesome-implicit-representations)__ for more resources on implicit neural representations
