@@ -45,7 +45,7 @@ __Shape Representation:__ Using signed distance functions (SDFs), INRs can repre
 * #### [Datasets](datasets/README.md)
     * fastMRI
     * NeRF
-    * GALAXY?
+    * COSMOS
     * kodak
 
 * #### Models

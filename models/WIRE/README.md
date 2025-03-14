@@ -20,5 +20,5 @@ Inspired by harmonic analysis, WIRE is a highly accurate and robust INR that doe
 
 * [Wavelets: a mathematical microscope](https://www.youtube.com/watch?v=jnxqHcObNK4)
 
-* [The Spectrogram and the Gabor Transform](https://www.youtube.com/watch?v=EfWnEldTyPA&t=140s) - Video by Steve Brunton
+* [The Spectrogram and the Gabor Transform](https://www.youtube.com/watch?v=EfWnEldTyPA&t=140s)
 
