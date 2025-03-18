@@ -8,7 +8,7 @@ In machine learning, diffusion models—also known as diffusion probabilistic mo
 2. **Reverse Process (Denoising)**: A neural network learns to approximate the reverse of this diffusion process to generate new samples.
 3. **Sampling Procedure**: Once trained, the model can synthesize new data by reversing the noise perturbation process.
 
-![](images/diffusion.png)
+![](https://github.com/user-attachments/assets/b78f5dbb-3920-40ca-8852-03357705bc5b)
 
 
 ### Foundational Models: 
